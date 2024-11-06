@@ -1,0 +1,16 @@
+{
+  "name": "snippet-saver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.280",
+    "chrome-types": "^0.1.316",
+    "typescript": "^5.6.3"
+  },
+  {
+    "scripts": {
+      "build": "tsc"
+    }
+  }
+}

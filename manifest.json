@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Snippet Saver",
+  "version": "1.0",
+  "description": "Save text snippets via right-click.",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "public/images/hello_extensions.png"
+  }
+}
