@@ -38,6 +38,12 @@ function saveSnippet(text: string, tab: chrome.tabs.Tab) {
         chrome.storage.local.set({ snippets: snippets }, () => {
           console.log("Snippet saved:", tab, tab.url, tab.title);
         });
+        console.log("sending highlighttext:", tab, tab.id, text);
+
+        // Send message to content script to highlight the saved text
+        if (tab.id) {
+          chrome.tabs.sendMessage(tab.id, { action: "highlightText", text });
+        }
       }
     }
   );

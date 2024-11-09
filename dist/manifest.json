@@ -1,17 +1,27 @@
 {
-    "name": "Snippet Saver",
-    "description": "Save text snippets via right-click.",
-    "permissions": [
-      "contextMenus",
-      "storage"
-    ],
-    "background": {
-      "service_worker": "js/background.js"
-    },
-    "version": "1.0.0",
-    "manifest_version": 3,
-    "action": {
-        "default_popup": "js/index.html",
-        "default_title": "React Chrome Extension"
+  "name": "Snippet Saver",
+  "description": "Save text snippets via right-click.",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "js/index.html",
+    "default_title": "React Chrome Extension"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/content.js"
+      ]
     }
+  ]
 }
